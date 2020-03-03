@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title> Mars </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+            // Load google charts
+            google.charts.load('current', {'packages':['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+
+            // dingen in de chart
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Task', 'Hours per Day'],
+                    ['Werk', 8],
+                    ['Eten', 2],
+                    ['Ontspanning', 4],
+                    ['Sporten', 2],
+                    ['Slapen', 8]
+                    ]);
+
+                // Opmaak 
+                var options = {
+                    colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
+                    is3D: true,
+                    backgroundColor: 'black',
+                    legend: {
+                        textStyle: {color: '#fff'},
+                        position: 'bottom', alignment: 'start'
+                    },
+                    chartArea: {'width': '100%', 'height': '80%'},
+                };
+
+                // in html zetten
+                var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                chart.draw(data, options);
+            }
+        </script>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <script type="text/javascript">
+            google.charts.load('current', {'packages':['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                ['Maand', 'Spiermassa',],
+                ['1',  100,],
+                ['2',  95,],
+                ['3',  90, ],
+                ['4',  85,],
+                ['5',  80,],
+                ['6',  75,],
+                ['7',  70,],
+                ['8',  65,],
+                ['9',  60,],
+                ]);
+
+                var options = {
+                curveType: 'function',
+                colors: ['#e0440e'],
+                backgroundColor: 'black',
+                legend: {
+                    textStyle: {color: '#fff' },
+                    position: 'bottom', alignment: 'start'
+                },
+                chartArea: {'width': '100%', 'height': '80%'},
+                };
+
+                var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+                chart.draw(data, options);
+            }
+        </script>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+             google.charts.load('current', {'packages':['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                ['Tijd', 'Afstand in km',],
+                ['Maand 2',  100000000,],
+                ['Maand 4',  200000000,],
+                ['Maand 6',  300000000,],
+                ['Maand 8',  400000000,]
+                ]);
+
+                var options = {
+                hAxis: {title: 'Afstand',  titleTextStyle: {color: '#fff'}},
+                vAxis: {minValue: 0},
+                colors: ['#e0440e'],
+                backgroundColor: 'black',
+                legend: {
+                    textStyle: {color: '#fff'},
+                    position: 'bottom', alignment: 'start'
+                },
+                chartArea: {'width': '100%', 'height': '80%'},
+                };
+
+                var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+                chart.draw(data, options);
+            }
+        </script>
+
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <a href="#" class="text-gray"> 
+                    <img src="fotos/logowit.png" class="Logo" alt="logo"/>
+                </a>
+            </div>
+        </nav>
+        <header>
+            <div class="start">
+                <h1> Vakantie naar Mars</h1>
+                <p> Alles wat jij nog moet weten voor vertrek</p>
+            </div>
+        </header>
+
+        <section>
+            <article>
+                <h1>Dagindeling</h1>
+                <div class="chart-wrap">
+                    <div id="piechart"></div>
+                </div>
+                    <p class="dagIndeling">
+                        Als je dan eenmaal eindelijk onderweg ben naar de rode planneet Mars zijn er een aantal dingen die je
+                        bezig houden tijdens deze lange reis. </br> </br>
+
+                        Van de 24 uur is er 8 uur van die tijd ingepland voor het slapen. Ook moetten er verschillende werkzaamheden
+                        gedaan worden aan bord, ook hier is 8 uur voor ingepland. Om je gezond te houden moet er minstens 2 uur per dag 
+                        gesport worden. Ook is er een totaal van 2 uur per dag ingepland voor het nuttigen van de maaltijden. Als laatste
+                        is er nog 4 uur aan vrije tijd over, waarbij je bijvoorbeeld van het mooie ruimte uitzicht kan genieten, of bij
+                        kan blijven met de nieuwste series.
+                    </p>
+            </article>
+
+            <article>
+                <h1>Spiermassa</h1>
+                <div class="chart-wrap2">
+                    <div id="curve_chart"></div>
+                </div>
+                    <p class="spiermassa">
+                        Als je gewichtloos ben gebruik je veel minder je spieren dan dat je hier gewoon op aarde doet.
+                        De druk die je te verduuren kijgt is ook een stuk minder. <br/> <br/>
+
+                        Het is daardoor belangrijk om goed en voldoende te bewegen. Als je niet voldoende oefeningen doet om je spier massa
+                        op pijl te houden, word deze drastisch vermindert. Dit kan alleen maar problemen opleveren als je weer terug op aarde 
+                        komt na je reis.
+
+                    </p>
+            </article>
+
+            <article>
+                <h1>Duur van de reis</h1>
+                <div class="chart-wrap3">
+                    <div id="chart_div"></div>
+                </div>
+                <p class="duur">
+                    De maximale afstand van de Aarde naar Mars is 400.000.000 km en de reis er naartoe duurt zo ongeveer 8 maanden.
+                    <br/> <br/>
+                    Als er met een grood ruimteschip met alle brandstof en andere nodige middelen aan bord naar Mars word gerezen 
+                    duurt de heen reis zo ongeveer 8 maanden. Dat klinkt als een hele lange tijd, maar het is die tijd zeker waard. Er 
+                    word verwacht dat er een gemiddelde afstand van 50.000.000 km per maand word afgelecht. 
+                </p>
+
+            </article>
+        </section>
+
+            <footer>
+                <h1>
+                    Wij wensen u een fijne reis!</h1>
+            </footer>
+    </body>
+</html>
