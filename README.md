@@ -5,7 +5,13 @@
 -	Hoe ziet een dag in het ruimteschip er uit? 
 -	Hoe lang de reis duurt 
 
-Aan de hand van deze website kunnen deze 103 mensen de bovenstaande dingen te weten komen.
+Aan de hand van deze website wil ik deze 103 mensen exstra invormatie verschaffen, zodat zij precies weten waar ze aantoe zijn tijden hun reis.
+
+Ik heb er voor gekozen dit een beetje een donker thema te geven, met de rode kleuren van de planeet mars. Dit heb ik gedaan om de mensen die daar naar op vakantie gaan toch vast een beetje in de stemmin over hun bestemming kunnen komen.
+
+verder heb ik gebruik gemaakt van google charts. Ik heb voor deze thegniek gekozen omdat ik zelf erg veel moeite heb met javascript en ik over deze thechniek veel informatie kon vinden om mij verder op weg te helpen. 
+
+
 
 (de grafieken schalen mee, maar alleen nadat je de pagina opnieuw geladen heb)
 
